@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import ListBreeds from "../views/ListBreeds.vue";
 import BreedDetails from "../views/BreedDetails.vue";
+import NotFound from "@/views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,10 @@ const routes = [
     name: "breed-details",
     component: BreedDetails,
     props: true,
+  },
+  {
+    path: "*",
+    component: NotFound,
   },
 ];
 
